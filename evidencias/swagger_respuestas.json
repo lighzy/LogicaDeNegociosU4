@@ -1,0 +1,33 @@
+[
+  {
+    "url": "http://127.0.0.1:8000/orders/O013/confirm",
+    "status": 200,
+    "body": {
+      "id": "O013",
+      "customer_id": "C001",
+      "status": "CONFIRMED",
+      "units": 1,
+      "currency": "MXN",
+      "total": "600.00",
+      "discount_rate": "0",
+      "discount": "0.00",
+      "payable": "600.00",
+      "tracking_number": null,
+      "cancellation_reason": null,
+      "events": [
+        {
+          "name": "OrderConfirmed",
+          "order_id": "O013",
+          "occurred_at": "2026-10-27T20:18:48.360860+00:00"
+        }
+      ]
+    }
+  },
+  {
+    "url": "http://127.0.0.1:8000/orders/O013/confirm",
+    "status": 409,
+    "body": {
+      "detail": "Requiere DRAFT; estado actual CONFIRMED"
+    }
+  }
+]

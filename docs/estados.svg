@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3Z" fill="#475569"/></marker></defs>
+<rect width="1000" height="650" fill="#fff"/>
+<g font-family="Arial,sans-serif" text-anchor="middle">
+<text x="500" y="45" font-size="26" font-weight="bold" fill="#0f172a">TechStore · Máquina de estados</text>
+<g stroke="#475569" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+<path d="M500 145V225"/><path d="M500 285V390"/><path d="M635 255H805V390"/>
+<path d="M440 450L285 540"/><path d="M550 450L670 540"/>
+</g>
+<g fill="#eef2ff" stroke="#6366f1" stroke-width="2">
+<rect x="365" y="85" width="270" height="60" rx="10"/>
+<rect x="365" y="225" width="270" height="60" rx="10"/>
+<rect x="365" y="390" width="270" height="60" rx="10"/>
+</g>
+<g fill="#ecfdf5" stroke="#059669" stroke-width="2">
+<rect x="130" y="540" width="270" height="60" rx="10"/>
+<rect x="565" y="540" width="270" height="60" rx="10"/>
+</g>
+<rect x="695" y="390" width="230" height="60" rx="10" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+<g font-size="21" font-weight="bold" fill="#0f172a">
+<text x="500" y="122">DRAFT</text><text x="500" y="262">CONFIRMED</text><text x="500" y="427">SHIPPED</text>
+<text x="810" y="427">CANCELLED</text><text x="265" y="577">DELIVERED</text><text x="700" y="577">RETURNED</text>
+</g>
+<g font-size="17" fill="#334155">
+<text x="300" y="180">confirm · cliente activo</text><text x="300" y="204">y al menos un artículo</text>
+<text x="365" y="340">ship · guía obligatoria</text><text x="810" y="310">cancel</text><text x="810" y="336">motivo obligatorio</text>
+<text x="285" y="494">deliver</text><text x="680" y="494">return_order</text>
+<text x="500" y="633" font-size="15">Cada flecha válida emite un evento. Las operaciones rechazadas no cambian el pedido.</text>
+</g></g></svg>

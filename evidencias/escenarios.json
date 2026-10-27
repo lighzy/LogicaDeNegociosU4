@@ -1,0 +1,500 @@
+[
+  {
+    "case": "E01",
+    "order": "O001",
+    "initial": {
+      "status": "DRAFT",
+      "units": 4,
+      "total": "2100.00",
+      "customer": "C001",
+      "vip": true,
+      "active": true,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "calculate_discount()",
+        "result": "éxito",
+        "status": "DRAFT",
+        "events": []
+      }
+    ],
+    "final_status": "DRAFT",
+    "final_units": 4,
+    "rate": "0.10",
+    "discount": "210.00",
+    "payable": "1890.00",
+    "events": []
+  },
+  {
+    "case": "E02",
+    "order": "O002",
+    "initial": {
+      "status": "DRAFT",
+      "units": 2,
+      "total": "1050.00",
+      "customer": "C002",
+      "vip": false,
+      "active": true,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "calculate_discount()",
+        "result": "éxito",
+        "status": "DRAFT",
+        "events": []
+      }
+    ],
+    "final_status": "DRAFT",
+    "final_units": 2,
+    "rate": "0",
+    "discount": "0.00",
+    "payable": "1050.00",
+    "events": []
+  },
+  {
+    "case": "E03",
+    "order": "O003",
+    "initial": {
+      "status": "DRAFT",
+      "units": 4,
+      "total": "2100.00",
+      "customer": "C003",
+      "vip": true,
+      "active": false,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "confirm()",
+        "result": "InvalidOrderData",
+        "message": "Requiere artículos y cliente activo",
+        "status": "DRAFT",
+        "events": []
+      }
+    ],
+    "final_status": "DRAFT",
+    "final_units": 4,
+    "rate": "0.10",
+    "discount": "210.00",
+    "payable": "1890.00",
+    "events": []
+  },
+  {
+    "case": "E04",
+    "order": "O005",
+    "initial": {
+      "status": "DRAFT",
+      "units": 4,
+      "total": "2100.00",
+      "customer": "C005",
+      "vip": true,
+      "active": true,
+      "promotion": true
+    },
+    "steps": [
+      {
+        "operation": "calculate_discount()",
+        "result": "éxito",
+        "status": "DRAFT",
+        "events": []
+      }
+    ],
+    "final_status": "DRAFT",
+    "final_units": 4,
+    "rate": "0",
+    "discount": "0.00",
+    "payable": "2100.00",
+    "events": []
+  },
+  {
+    "case": "E05",
+    "order": "O006",
+    "initial": {
+      "status": "DRAFT",
+      "units": 1,
+      "total": "18000.00",
+      "customer": "C006",
+      "vip": false,
+      "active": true,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "calculate_discount()",
+        "result": "éxito",
+        "status": "DRAFT",
+        "events": []
+      }
+    ],
+    "final_status": "DRAFT",
+    "final_units": 1,
+    "rate": "0.05",
+    "discount": "900.00",
+    "payable": "17100.00",
+    "events": []
+  },
+  {
+    "case": "E06",
+    "order": "O007",
+    "initial": {
+      "status": "DRAFT",
+      "units": 0,
+      "total": "0",
+      "customer": "C007",
+      "vip": true,
+      "active": true,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "confirm()",
+        "result": "InvalidOrderData",
+        "message": "Requiere artículos y cliente activo",
+        "status": "DRAFT",
+        "events": []
+      }
+    ],
+    "final_status": "DRAFT",
+    "final_units": 0,
+    "rate": "0",
+    "discount": "0.00",
+    "payable": "0.00",
+    "events": []
+  },
+  {
+    "case": "E07",
+    "order": "O008",
+    "initial": {
+      "status": "DRAFT",
+      "units": 20,
+      "total": "2400.00",
+      "customer": "C008",
+      "vip": false,
+      "active": true,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "confirm()",
+        "result": "éxito",
+        "status": "CONFIRMED",
+        "events": [
+          "OrderConfirmed"
+        ]
+      }
+    ],
+    "final_status": "CONFIRMED",
+    "final_units": 20,
+    "rate": "0",
+    "discount": "0.00",
+    "payable": "2400.00",
+    "events": [
+      "OrderConfirmed"
+    ]
+  },
+  {
+    "case": "E08",
+    "order": "O009",
+    "initial": {
+      "status": "DRAFT",
+      "units": 19,
+      "total": "2280.00",
+      "customer": "C009",
+      "vip": true,
+      "active": true,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "add_item(SKU003, 2)",
+        "result": "OrderItemLimitExceeded",
+        "message": "Máximo 20 unidades",
+        "status": "DRAFT",
+        "events": []
+      }
+    ],
+    "final_status": "DRAFT",
+    "final_units": 19,
+    "rate": "0.10",
+    "discount": "228.00",
+    "payable": "2052.00",
+    "events": []
+  },
+  {
+    "case": "E09",
+    "order": "O010",
+    "initial": {
+      "status": "DRAFT",
+      "units": 2,
+      "total": "500.00",
+      "customer": "C010",
+      "vip": false,
+      "active": true,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "calculate_discount()",
+        "result": "éxito",
+        "status": "DRAFT",
+        "events": []
+      }
+    ],
+    "final_status": "DRAFT",
+    "final_units": 2,
+    "rate": "0",
+    "discount": "0.00",
+    "payable": "500.00",
+    "events": []
+  },
+  {
+    "case": "E10",
+    "order": "O011",
+    "initial": {
+      "status": "DRAFT",
+      "units": 3,
+      "total": "1500.00",
+      "customer": "C011",
+      "vip": true,
+      "active": true,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "calculate_discount()",
+        "result": "éxito",
+        "status": "DRAFT",
+        "events": []
+      }
+    ],
+    "final_status": "DRAFT",
+    "final_units": 3,
+    "rate": "0",
+    "discount": "0.00",
+    "payable": "1500.00",
+    "events": []
+  },
+  {
+    "case": "E11",
+    "order": "O012",
+    "initial": {
+      "status": "DRAFT",
+      "units": 1,
+      "total": "850.00",
+      "customer": "C012",
+      "vip": false,
+      "active": true,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "confirm()",
+        "result": "éxito",
+        "status": "CONFIRMED",
+        "events": [
+          "OrderConfirmed"
+        ]
+      },
+      {
+        "operation": "ship(\"\")",
+        "result": "InvalidOrderData",
+        "message": "Guía obligatoria",
+        "status": "CONFIRMED",
+        "events": []
+      }
+    ],
+    "final_status": "CONFIRMED",
+    "final_units": 1,
+    "rate": "0",
+    "discount": "0.00",
+    "payable": "850.00",
+    "events": [
+      "OrderConfirmed"
+    ]
+  },
+  {
+    "case": "E12",
+    "order": "O013",
+    "initial": {
+      "status": "DRAFT",
+      "units": 1,
+      "total": "600.00",
+      "customer": "C001",
+      "vip": true,
+      "active": true,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "confirm()",
+        "result": "éxito",
+        "status": "CONFIRMED",
+        "events": [
+          "OrderConfirmed"
+        ]
+      },
+      {
+        "operation": "confirm() por segunda vez",
+        "result": "InvalidOrderTransition",
+        "message": "Requiere DRAFT; estado actual CONFIRMED",
+        "status": "CONFIRMED",
+        "events": []
+      }
+    ],
+    "final_status": "CONFIRMED",
+    "final_units": 1,
+    "rate": "0",
+    "discount": "0.00",
+    "payable": "600.00",
+    "events": [
+      "OrderConfirmed"
+    ]
+  },
+  {
+    "case": "E13",
+    "order": "O014",
+    "initial": {
+      "status": "DRAFT",
+      "units": 1,
+      "total": "600.00",
+      "customer": "C002",
+      "vip": false,
+      "active": true,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "confirm()",
+        "result": "éxito",
+        "status": "CONFIRMED",
+        "events": [
+          "OrderConfirmed"
+        ]
+      },
+      {
+        "operation": "ship(\"GUIA-U4-001\")",
+        "result": "éxito",
+        "status": "SHIPPED",
+        "events": [
+          "OrderShipped"
+        ]
+      },
+      {
+        "operation": "cancel(\"Solicitud del cliente\")",
+        "result": "InvalidOrderTransition",
+        "message": "Requiere CONFIRMED; estado actual SHIPPED",
+        "status": "SHIPPED",
+        "events": []
+      }
+    ],
+    "final_status": "SHIPPED",
+    "final_units": 1,
+    "rate": "0",
+    "discount": "0.00",
+    "payable": "600.00",
+    "events": [
+      "OrderConfirmed",
+      "OrderShipped"
+    ]
+  },
+  {
+    "case": "E14",
+    "order": "O015",
+    "initial": {
+      "status": "DRAFT",
+      "units": 1,
+      "total": "450.00",
+      "customer": "C005",
+      "vip": true,
+      "active": true,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "confirm()",
+        "result": "éxito",
+        "status": "CONFIRMED",
+        "events": [
+          "OrderConfirmed"
+        ]
+      },
+      {
+        "operation": "ship(\"GUIA-U4-001\")",
+        "result": "éxito",
+        "status": "SHIPPED",
+        "events": [
+          "OrderShipped"
+        ]
+      },
+      {
+        "operation": "return_order()",
+        "result": "éxito",
+        "status": "RETURNED",
+        "events": [
+          "OrderReturned"
+        ]
+      }
+    ],
+    "final_status": "RETURNED",
+    "final_units": 1,
+    "rate": "0",
+    "discount": "0.00",
+    "payable": "450.00",
+    "events": [
+      "OrderConfirmed",
+      "OrderShipped",
+      "OrderReturned"
+    ]
+  },
+  {
+    "case": "E15",
+    "order": "O016",
+    "initial": {
+      "status": "DRAFT",
+      "units": 1,
+      "total": "2100.00",
+      "customer": "C007",
+      "vip": true,
+      "active": true,
+      "promotion": false
+    },
+    "steps": [
+      {
+        "operation": "confirm()",
+        "result": "éxito",
+        "status": "CONFIRMED",
+        "events": [
+          "OrderConfirmed"
+        ]
+      },
+      {
+        "operation": "ship(\"GUIA-U4-001\")",
+        "result": "éxito",
+        "status": "SHIPPED",
+        "events": [
+          "OrderShipped"
+        ]
+      },
+      {
+        "operation": "deliver()",
+        "result": "éxito",
+        "status": "DELIVERED",
+        "events": [
+          "OrderDelivered"
+        ]
+      }
+    ],
+    "final_status": "DELIVERED",
+    "final_units": 1,
+    "rate": "0",
+    "discount": "0.00",
+    "payable": "2100.00",
+    "events": [
+      "OrderConfirmed",
+      "OrderShipped",
+      "OrderDelivered"
+    ]
+  }
+]

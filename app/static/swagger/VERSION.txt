@@ -1,0 +1,3 @@
+Swagger UI Dist 5.17.14
+Source: official npm package swagger-ui-dist@5.17.14
+License: Apache-2.0; see LICENSE and NOTICE.

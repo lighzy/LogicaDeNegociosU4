@@ -1,0 +1,9 @@
+{
+  "pruebas": 89,
+  "resultado": "89 passed, 1 warning",
+  "escenarios": 15,
+  "pedidos": 16,
+  "python": "3.12.14",
+  "swagger_ui": "5.17.14",
+  "nota": "Ver logs para tiempo exacto y advertencia no bloqueante de Starlette/httpx."
+}

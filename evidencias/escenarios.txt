@@ -1,0 +1,15 @@
+E01 O001 -> DRAFT: éxito
+E02 O002 -> DRAFT: éxito
+E03 O003 -> DRAFT: InvalidOrderData
+E04 O005 -> DRAFT: éxito
+E05 O006 -> DRAFT: éxito
+E06 O007 -> DRAFT: InvalidOrderData
+E07 O008 -> CONFIRMED: éxito
+E08 O009 -> DRAFT: OrderItemLimitExceeded
+E09 O010 -> DRAFT: éxito
+E10 O011 -> DRAFT: éxito
+E11 O012 -> CONFIRMED: InvalidOrderData
+E12 O013 -> CONFIRMED: InvalidOrderTransition
+E13 O014 -> SHIPPED: InvalidOrderTransition
+E14 O015 -> RETURNED: éxito
+E15 O016 -> DELIVERED: éxito
